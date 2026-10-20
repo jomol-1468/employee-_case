@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2249514_employ_1_employee_case</collection>
+        <condition>current.requested_for.changes()</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Populate Email and Update Active</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    // Auto-populate Email when Requested for changes
+    if (current.requested_for.changes()) {
+        if (!current.requested_for.nil()) {
+            var requestedUser = current.requested_for.getRefRecord();
+
+            if (requestedUser.isValidRecord()) {
+                current.email = requestedUser.getValue('email') || '';
+            }
+        } else {
+            current.email = '';
+        }
+    }
+
+    // Keep Active synchronized with Status
+    current.active = (current.status.toString() != 'closed');
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 06:34:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4ab8c5ed538417100f3e17c0a0490ea2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Populate Email and Update Active</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Employee Experience Management" source="x_2249514_employ_1">a2238e99538c93100f3e17c0a0490eab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Experience Management">a2238e99538c93100f3e17c0a0490eab</sys_scope>
+        <sys_update_name>sys_script_4ab8c5ed538417100f3e17c0a0490ea2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 06:34:29</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=4ab8c5ed538417100f3e17c0a0490ea2"/>
+</record_update>

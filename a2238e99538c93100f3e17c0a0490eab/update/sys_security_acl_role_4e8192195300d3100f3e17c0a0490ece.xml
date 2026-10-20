@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-19 17:11:42</sys_created_on>
+        <sys_id>4e8192195300d3100f3e17c0a0490ece</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2249514_employ_1_employee_case.x_2249514_employ_1.ex.admin</sys_name>
+        <sys_package display_value="Employee Experience Management" source="x_2249514_employ_1">a2238e99538c93100f3e17c0a0490eab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Experience Management">a2238e99538c93100f3e17c0a0490eab</sys_scope>
+        <sys_security_acl display_value="x_2249514_employ_1_employee_case">bd8192195300d3100f3e17c0a0490eb8</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_4e8192195300d3100f3e17c0a0490ece</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-19 17:11:42</sys_updated_on>
+        <sys_user_role display_value="x_2249514_employ_1.ex.admin" name="x_2249514_employ_1.ex.admin">be238e99538c93100f3e17c0a0490efa</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

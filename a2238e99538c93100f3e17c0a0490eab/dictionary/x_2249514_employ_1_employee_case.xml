@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="548152195300d3100f3e17c0a0490e71" extends="task" label="Employee Case" max_length="40" name="x_2249514_employ_1_employee_case" type="collection">
+        <element choice="1" label="Contact Preference" max_length="40" name="contact_preference" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Portal" sequence="1" value="portal"/>
+                <element inactive_on_update="false" label="Mobile" sequence="2" value="mobile"/>
+                <element inactive_on_update="false" label="Email" sequence="0" value="email"/>
+            </choice>
+        </element>
+        <element choice="3" choice_field="status" choice_table="x_2249514_employ_1_employee_case" default="1" label="Status" max_length="255" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="approved" sequence="1" value="4"/>
+                <element inactive_on_update="false" label="in_progress" sequence="0" value="3"/>
+                <element inactive_on_update="false" label="rejected" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="new" sequence="4" value="1"/>
+                <element inactive_on_update="false" label="closed" sequence="3" value="5"/>
+            </choice>
+        </element>
+        <element choice="1" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="HR" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Payroll" sequence="2" value="payroll"/>
+                <element inactive_on_update="false" label="Access" sequence="3" value="access"/>
+                <element inactive_on_update="false" label="IT" sequence="1" value="it"/>
+            </choice>
+        </element>
+        <element label="Email" max_length="40" name="email" read_only="true" read_only_option="display_read_only" type="string"/>
+        <element label="Requested For" max_length="40" name="requested_for" reference="sys_user" type="reference"/>
+        <element label="Manager" max_length="32" name="manager" reference="sys_user" type="reference"/>
+    </element>
+</database>

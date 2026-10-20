@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Displays a personalized greeting when the request form loads.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Personalized Greeting</name>
+        <order/>
+        <script><![CDATA[
+function onLoad() {
+    if (g_form.isNewRecord()) {
+        g_form.addInfoMessage(
+            'Hello, ' + g_user.firstName +
+            '! Please describe your request below.'
+        );
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 08:48:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d5f22525538817100f3e17c0a0490e22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Personalized Greeting</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Employee Experience Management" source="x_2249514_employ_1">a2238e99538c93100f3e17c0a0490eab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Experience Management">a2238e99538c93100f3e17c0a0490eab</sys_scope>
+        <sys_update_name>sys_script_client_d5f22525538817100f3e17c0a0490e22</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 08:48:35</sys_updated_on>
+        <table>x_2249514_employ_1_employee_case</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
