@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for assigned_to in x_2249514_employ_1_employee_case, if the ACL script returns true.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_2249514_employ_1_employee_case.assigned_to</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[answer = gs.getUser().isMemberOf('Employee Case Coordination') ||
+         gs.hasRole('x_2249514_employ_1.ex.admin');]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 17:24:03</sys_created_on>
+        <sys_id>f9455b65530857100f3e17c0a0490e31</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_2249514_employ_1_employee_case.assigned_to</sys_name>
+        <sys_package display_value="Employee Experience Management" source="x_2249514_employ_1">a2238e99538c93100f3e17c0a0490eab</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Employee Experience Management">a2238e99538c93100f3e17c0a0490eab</sys_scope>
+        <sys_update_name>sys_security_acl_f9455b65530857100f3e17c0a0490e31</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 17:43:08</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>
